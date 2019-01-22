@@ -10,9 +10,11 @@ const map = new mapboxgl.Map({
 });
 
 const markerDomEl = document.createElement("div"); // Create a new, detached DIV
-markerDomEl.style.width = "500px";
-markerDomEl.style.height = "500px";
+markerDomEl.style.width = "75px";
+markerDomEl.style.height = "75px";
 markerDomEl.style.backgroundImage = "url(http://i.imgur.com/WbMOfMl.png)";
-
+markerDomEl.style.backgroundRepeat = 'no-repeat';
 new mapboxgl.Marker(markerDomEl).setLngLat([-74.009, 40.705]).addTo(map);
 
+const marker = require('./src/marker')
+const mark = marker('hotel', [-74.009, 40.715])
